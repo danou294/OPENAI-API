@@ -8,17 +8,22 @@ This project is a Dockerized version of a Django-based API service that interact
    ```bash
    git clone https://github.com/danou294/OPENAI-API.git
    ```
-2. **Build the Docker Image:**
+2. **Replace the OpenAI API Key on chat/view.py:**
+   ```bash
+   openai.api_key = 'YOUR-API-KEY'
+   ```
+
+3. **Build the Docker Image:**
    ```bash
    docker build -t my_django_app .
    ```
    
-3. **Run the Docker Container:**
+4. **Run the Docker Container:**
    ```bash
    docker run -p 8000:8000 my_django_app
    ```
    
-4. **Make Requests:**
+5. **Make Requests:**
 
 Send POST requests to http://127.0.0.1:8000/chat/ with JSON payload:
 
